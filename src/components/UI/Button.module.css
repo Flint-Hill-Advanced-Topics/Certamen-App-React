@@ -1,0 +1,13 @@
+.button {
+    text-align: center;
+    background: maroon;
+    color:  white;
+    border: none; 
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px 80px;
+}
+
+.button:hover{
+  background: goldenrod;
+}

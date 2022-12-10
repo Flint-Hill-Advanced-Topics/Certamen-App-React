@@ -1,0 +1,54 @@
+a{
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+.tag{
+	position:  fixed;
+	bottom:  0;
+	right: 0;
+	padding:  20px;
+	color:  white;
+	font-weight:  10px;
+	font-size:  25px;
+}
+
+nav{
+  display: flex;
+  width: 200px;
+  background:#ffe3e6ff; 
+  margin: 0 auto;
+  border-radius: 20px;
+  
+}
+
+span{
+  border-style: none;
+	border-radius: 20px;
+	padding-right:  100px;
+	padding-down: 20px;
+	padding-up:  20px;
+	background:  pink;
+	cursor: pointer;
+  display: block;
+}
+
+span::after{
+  float: right;
+  right: 5%;
+  content:"+";
+}
+
+.uslide{
+  clear: both;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+
+#touch {position: absolute; opacity: 0; height: 0px;}
+
+#touch:checked + .uslide {height: 200px;}

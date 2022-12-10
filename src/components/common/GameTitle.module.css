@@ -1,0 +1,9 @@
+.GameTitle h1{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-top: 90px;
+    margin-bottom:  60px;
+}

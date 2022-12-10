@@ -1,0 +1,72 @@
+a{
+    text-decoration: none;
+    color:  white;
+}
+
+.Bubble{
+    position: relative;
+    margin: 0 auto;
+    width:  300px;
+    height:  400px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    background:  white;
+    text-align:  center;  
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+}
+
+
+h2{
+	font-size: 45px;
+	font-weight:  bolder;
+	padding-top:  40px;
+	margin-top:  10px;
+	color:  black;
+}
+
+p{
+	text-align: justify;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding:  20px;
+	width:  250px;
+	font-weight: lighter;
+	font-size: 20px;
+}
+
+
+.TryAgain{
+    text-align: center;
+    background: maroon;
+    color:  white;
+    border-radius: 20px;
+    border-bottom: 1px solid;
+    border-color: goldenrod;
+    padding: 20px 70px;
+}
+
+.TryAgain:hover{
+  background: goldenrod;
+  border-color: white;
+}
+
+.divider{
+	background: white;
+	height: 50px;
+}
+
+.Home{
+    text-align: center;
+    background: maroon;
+    color:  white;
+    border-radius: 20px;
+    border-bottom: 1px solid;
+    border-color: goldenrod;
+    padding: 20px 82px;
+}
+
+.Home:hover{
+  background: goldenrod;
+  border-color: white;
+}

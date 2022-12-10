@@ -1,0 +1,68 @@
+
+.ended{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.ended h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: none;
+    margin-top: 10px;
+    margin-bottom:  100px;
+}
+
+.homeButton{
+    text-align: center;
+    color: white;
+    background: maroon;
+    border-radius: 25px;
+    border-bottom: 1px solid;
+    border-color: goldenrod;
+    width:  200px;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+.goBack{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.goBack h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: none;
+    margin-top: 10px;
+    margin-bottom:  100px;
+}
+
+.homeB {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color:  white;
+    cursor: pointer; 
+}
+
+.tag{
+    position:  fixed;
+    bottom:  0;
+    right: 0;
+    padding:  20px;
+    color:  white;
+    font-weight:  10px;
+    font-size:  25px;
+}

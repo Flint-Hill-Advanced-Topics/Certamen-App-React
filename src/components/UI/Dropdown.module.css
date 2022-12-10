@@ -1,0 +1,23 @@
+.dropdowns{
+	position: relative;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+  display: flex;
+}
+
+span{
+  border-style: none;
+	border-radius: 20px;
+	padding-right:  80px;
+	padding-left:  15px;
+	padding-down: 20px;
+	padding-up:  20px;
+	background:  pink;
+	cursor: pointer;
+}
+
+.collapsed {
+  display: none;
+}
+
