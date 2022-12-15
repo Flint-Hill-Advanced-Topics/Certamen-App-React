@@ -15,32 +15,9 @@
 	font-size:  30px;
 }
 
-.StartButton{
-	text-align: center;
-    background: maroon;
-    font-size:  20px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    border-radius: 25px;
-    border-radius: 20px;
-    border-bottom: 1px solid;
-    border-color: goldenrod;
-    color:  white;
-    width:  200px;
-    margin: 0 auto;
-    padding: 20px 50px;
-
-}
-
 a{
 	text-decoration: none;
 	cursor: pointer;
-}
-
-.StartButton:hover {
-	background:  goldenrod;
-	border-color: purple;
-
 }
 
 

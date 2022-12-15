@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a{
+    text-decoration: none;
+    color:  white;
+}
+
+background{
+  display:flex;
+  justify-content:center;
+}
+button {
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    scale: 0.5;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  margin: 0 auto;
+  
+}
+  
+
+button:hover {
+    opacity: 0.8;
+}

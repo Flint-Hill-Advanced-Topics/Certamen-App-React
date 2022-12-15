@@ -12,10 +12,12 @@ const Dropdown = (props: any) => {
   };
   
   return (
-    <div>
-      <div onClick={onClickHandler}>{props.title}</div>
+    <div className={props.className}>
+      <div className={`${props.titleStyle}`} onClick={onClickHandler}>
+        {props.title}
+      </div>
       <div 
-        className={`${props.className} ${styles.dropdown} ${collapsed === "1" && styles.collapsed}`} 
+        className={`${props.itemStyle} ${styles.dropdown} ${collapsed === "1" && styles.collapsed}`} 
       >
         {props.children}
       </div>

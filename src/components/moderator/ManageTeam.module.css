@@ -14,15 +14,6 @@ a{
 	font-size:  25px;
 }
 
-nav{
-  display: flex;
-  width: 200px;
-  background:#ffe3e6ff; 
-  margin: 0 auto;
-  border-radius: 20px;
-  
-}
-
 span{
   border-style: none;
 	border-radius: 20px;
@@ -40,15 +31,11 @@ span::after{
   content:"+";
 }
 
-.uslide{
-  clear: both;
-  width: 100%;
-  height: 0px;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
+.bubble{
+  background: none;
 }
 
-#touch {position: absolute; opacity: 0; height: 0px;}
-
-#touch:checked + .uslide {height: 200px;}
+.button{
+  margin-top: 15px;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+}

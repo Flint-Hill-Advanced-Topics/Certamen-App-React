@@ -1,0 +1,28 @@
+.dropDown {
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+}
+
+.teamTitle {
+  width: 100%;
+  background: lightpink;
+  
+  text-align: center;
+  color:  white;
+  border: none; 
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 20px 80px;
+  cursor: pointer;
+}
+
+.players {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.players:hover{
+  color: hotpink;
+}

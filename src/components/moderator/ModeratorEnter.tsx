@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import styles from "./ModeratorEnter.module.css";
 import GameTitle from '../common/GameTitle';
 import Bubble from '../UI/Bubble';
+import Button from '../UI/Button';
 import Space from '../UI/Space';
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import GameManager from "../util/GameManager";
@@ -27,8 +28,10 @@ const ModeratorEnter = () => {
         <h2 className={`${styles.People}`}> People: </h2>
         <div className={`${styles.Number}`} id="Number"></div>
         <Link to="/Moderator/ManageTeam">
-          <button className={`${styles.StartButton}`}>Start</button>
-        </Link>
+        <Button>
+          <a className={styles.Start}>Start</a>
+        </Button>
+      </Link>
       </Bubble>
       <div className={`${styles.tag}`}> Moderator</div>
       
