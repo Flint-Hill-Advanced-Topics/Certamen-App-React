@@ -1,31 +1,51 @@
 import Player from "./Player";
+import Mod from "./Mod";
 
 class GameManager {
 
-    code: string;
+    code: string = '';
+    mod: Mod;
 
-    constructor() {
-      this.code = this.randomCode()
+    playerList = [];
+    teamList = [];
+
+    constructor(code = localStorage.getItem("code")) {
+      this.mod = this.createMod(this.randomCode());
+      this.startGame();
+      if(code !== '' && code !== null) this.code = code;
+      localStorage.setItem("code", this.code);
+      
+      fetch("",{
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          code: this.code,
+        }),
+      }).catch((e) => {});
     }
-    createPlayer(name: string) {
-        return new Player(name);
+  
+    createPlayer(name: string, id: string) {
+        return new Player(name, id);
     }
 
-    createMod() {
-        return new Mod();
+    createMod(id: string) {
+        return new Mod(this.code, 'Mod', id);
     }
 
-    startGame() {
+    async startGame() {
         this.code = this.randomCode();
-        //mod = this.createMod();
     }
 
     getCode() {
       return this.code;
     }
 
-    test() {
-        console.log('success');
+    regenerateCode() {
+      this.code = this.randomCode();
+            localStorage.setItem("code", this.code);
     }
 
     randomCode = () => {
@@ -36,12 +56,9 @@ class GameManager {
             tempIndex = (Math.random() * 36);
             roomCode += allCharNum.substring(tempIndex, tempIndex + 1);
         }
-        let a = Math.random*10000;
-        if(a == 876){
+        if(Math.random()*10000 == 876){
             roomCode += "√";
         }
-        document.querySelector("#GCode")
-        this.code = roomCode;
         return roomCode;
     }
 }

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <GameTitle />
       <Link to="/Player/Enter">
         <div className={`${styles.Player}`}>
@@ -20,7 +20,7 @@ const Home = () => {
           <p>Moderator</p>
         </div>
       </Link>
-    </div>
+    </>
   );
 };
 

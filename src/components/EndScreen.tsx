@@ -5,7 +5,7 @@ import GameTitle from "./common/GameTitle";
 
 const EndScreen = () => {
     return (
-      <div>
+      <>
         <GameTitle />
         <div className={styles.ended}>
           <h1> The Game Has Ended </h1>
@@ -19,6 +19,6 @@ const EndScreen = () => {
           <h1> Tap to Go Back Home </h1>
         </div>
         <div className={styles.tag}> Moderator </div>
-      </div>
+      </>
     );
   };

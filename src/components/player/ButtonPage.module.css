@@ -1,32 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-a{
-    text-decoration: none;
-    color:  white;
+.button{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px;
+    border-style: solid;
+    background: linear-gradient(180deg, red, maroon);
+    color: goldenrod; 
+    margin: 0 auto;
+    marign-top: 100px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    align-self: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.5);
 }
 
-background{
-  display:flex;
-  justify-content:center;
+.button:hover{
+    background: linear-gradient(180deg, goldenrod, yellow);
+    color: white; 
+    transition: 0.5s;
 }
-button {
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-    scale: 0.5;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85%;
-  margin: 0 auto;
-  
-}
-  
 
-button:hover {
-    opacity: 0.8;
+.button:active {
+    transform: scale(0.90);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
 }

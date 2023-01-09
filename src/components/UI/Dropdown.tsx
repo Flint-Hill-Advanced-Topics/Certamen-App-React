@@ -1,14 +1,11 @@
-import React, { useContext, useMemo, useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Dropdown.module.css";
 
 const Dropdown = (props: any) => {
-  const [collapsed, setCollapsed] = useState("1");
+  const [collapsed, setCollapsed] = useState(true);
 
   const onClickHandler = (event: any) => {
-    setCollapsed((prevState: any) => {
-      if(prevState === "1") return "0";
-      else return "1";
-    });
+    setCollapsed((prevState: any) => !prevState);
   };
   
   return (
@@ -17,7 +14,7 @@ const Dropdown = (props: any) => {
         {props.title}
       </div>
       <div 
-        className={`${props.itemStyle} ${styles.dropdown} ${collapsed === "1" && styles.collapsed}`} 
+        className={`${props.itemStyle} ${styles.dropdown} ${collapsed && styles.collapsed}`} 
       >
         {props.children}
       </div>

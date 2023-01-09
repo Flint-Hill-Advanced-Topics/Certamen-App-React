@@ -1,14 +1,19 @@
-class Mod extends User {
-    roomCode = '';
+import User from "./User";
 
-    constructor() {
-        this.roodCode = randomCode();
+class Mod extends User {
+    roomCode: string;
+
+    constructor(code: string, name: string, id: string) {
+        super(name, id);
+        this.roomCode = code;
     }
 
-    get roomCode(){
+    getRoomCode(){
         return this.roomCode;
     }
-    get isMod() {
+    getIsMod() {
         return true;
     }
 }
+
+export default Mod;

@@ -9,11 +9,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <main>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Player/*" element={<PlayerRouter />} />
-        <Route path="/Moderator/*" element={<ModeratorRouter />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Player/*" element={<PlayerRouter />} />
+          <Route path="/Moderator/*" element={<ModeratorRouter />} />
+        </Routes>
       </main>
     </BrowserRouter>
   );

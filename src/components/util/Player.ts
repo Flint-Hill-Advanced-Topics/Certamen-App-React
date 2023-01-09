@@ -6,8 +6,8 @@ class Player extends User {
     id = "";
 
 
-    constructor(name: string){
-        super(name,"asd");
+    constructor(name: string, id: string){
+        super(name, id);
         this.name = name;
     }
 
