@@ -11,19 +11,20 @@ const ManageTeam = (props: any) => {
   
     const navigate = useNavigate();
     const onClickHandler = () => {
-      navigate("/Moderator/ModeratorHome");
+      navigate("/Moderator/Home");
     }
+    
   return (
     <>
       <GameTitle />
       <Bubble className={styles.bubble}>
         <PlayerList />
-        <Link to="/Moderator/ModeratorHome">
+        <Button className={styles.button} onClick={onClickHandler}>
+          <a className={styles.next}>Next</a>
+        </Button>
           <Button className={styles.button} onClick={onClickHandler}>
-            <a className={styles.next}>Next</a>
-          </Button>
-        </Link>
-
+          <a className={styles.back}>Back</a>
+        </Button>
       <div className={styles.tag}>Moderator</div>
     
     </Bubble>

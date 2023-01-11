@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"
+import { getDatabase } from "firebase/database";
 import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -10,6 +10,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyCdkExxhtSdOopS1Zksu8sf-Celwfvk3j4",
   authDomain: "certamen2-189b0.firebaseapp.com",
+  databaseURL: "https://certamen2-189b0-default-rtdb.firebaseio.com",
   projectId: "certamen2-189b0",
   storageBucket: "certamen2-189b0.appspot.com",
   messagingSenderId: "327036033272",
@@ -20,5 +21,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const DB = getDatabase(app);
 
-export default const db = getFirestore(app);
+export default DB;

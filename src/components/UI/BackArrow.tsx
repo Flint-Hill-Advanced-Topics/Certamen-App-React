@@ -9,6 +9,7 @@ const BackArrow = (props: any) => {
       form={props.form}
       onClick={props.onClick}
       onSubmit={props.onSubmit}
+      
     >
       {props.children}
     </button>

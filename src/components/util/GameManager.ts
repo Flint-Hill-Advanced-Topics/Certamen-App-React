@@ -10,21 +10,10 @@ class GameManager {
     teamList = [];
 
     constructor(code = localStorage.getItem("code")) {
-      this.mod = this.createMod(this.randomCode());
       this.startGame();
       if(code !== '' && code !== null) this.code = code;
       localStorage.setItem("code", this.code);
-      
-      fetch("",{
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          code: this.code,
-        }),
-      }).catch((e) => {});
+      this.mod = this.createMod(this.randomCode());
     }
   
     createPlayer(name: string, id: string) {
@@ -45,7 +34,7 @@ class GameManager {
 
     regenerateCode() {
       this.code = this.randomCode();
-            localStorage.setItem("code", this.code);
+      localStorage.setItem("code", this.code);
     }
 
     randomCode = () => {

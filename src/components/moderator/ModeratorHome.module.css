@@ -20,6 +20,17 @@ a{
 	cursor: pointer;
 }
 
+.Bubble{
+  background: none;
+  color: white;
+}
+
+.Button{
+  margin-top: 50px;
+  margin: 0 auto;
+  width: 100px;
+}
+
 
 .tag{
 	position:  fixed;

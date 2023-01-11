@@ -15,11 +15,6 @@ const ModeratorEnter = () => {
   
   const [code, setCode] = useState(game.manager.getCode());
 
-
-  const codeRegenerateHandler = () => {
-    game.manager.regenerateCode();
-    setCode(game.manager.getCode());
-  };
   
   return (
     <>
@@ -27,9 +22,9 @@ const ModeratorEnter = () => {
       <Bubble>
         <h2 className={`${styles.Code}`}>Code</h2>
         <Space> 
-          <h3 className={`${styles.GCode}`} id="GCode">{game.manager.getCode()}</h3>
+          <h3 className={`${styles.GCode}`} id="GCode">{game.code}</h3>
         </Space>
-        <Button onClick={codeRegenerateHandler}>
+        <Button className={styles.Regenerate} onClick={game.onRegenerateCode}>
           Regenerate
         </Button>
         <h2 className={`${styles.People}`}> People: </h2>
