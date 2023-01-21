@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./EndScreen.moudle.css";
+import styles from "./EndScreen.module.css";
 import { Link } from "react-router-dom";
 import GameTitle from "./common/GameTitle";
 
@@ -22,3 +22,5 @@ const EndScreen = () => {
       </>
     );
   };
+
+export default EndScreen;

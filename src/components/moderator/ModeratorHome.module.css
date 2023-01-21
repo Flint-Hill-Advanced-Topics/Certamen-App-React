@@ -25,14 +25,35 @@ a{
   color: white;
 }
 
-.Button{
-  margin-top: 50px;
+.RefreshButton img{
+  object-fit: contain;
+  width: 25px;
+  height: 25px;
+  filter: invert(100%);
+}
+
+.RefreshButton{
   margin: 0 auto;
-  width: 100px;
+  border: none;
+  color: white;
+  background: none;
+  padding: 10px;
+  align-items: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+
+.RefreshButton:hover{
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  background: none;
+  transition: 0.5s;
 }
 
 
-.tag{
+.Tag{
 	position:  fixed;
 	bottom:  0;
 	right: 0;

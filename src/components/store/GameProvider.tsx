@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import GameManager from "../util/GameManager";
 import DB from "../../../Config"
-import { getDatabase, ref, update, get, set, remove } from "firebase/database";
+import { getDatabase, ref, update, get, set, remove, onValue } from "firebase/database";
 
 const GameContext = React.createContext({
   manager: new GameManager(),
   code: '',
   teamList: {},
   playerList: {},
-  updatePlayer: (player) => {}, // maybe not necessary
-  updateTeam: (team) => {}, //maybe not necessary
+  updatePlayer: (player: any) => {}, // maybe not necessary
+  updateTeam: (team: any) => {}, //maybe not necessary
   onRegenerateCode: () => {},
 });
 
@@ -24,6 +24,7 @@ const sampleTeamObject = {
     name: 'name',
     id: 'id',
     players: [],
+    score: [],
   },
 };
 
@@ -35,10 +36,12 @@ const GameProvider = (props: React.PropsWithChildren) => {
   const [teamList, setTeamList] = useState({}!);
   const dbRef = useMemo(() => ref(DB,'games/' + manager.getCode()), [code]);
   const testRef = useMemo(() => ref(DB,'games/'), [code]);
-  const test = useMemo(() => {
-    console.log("code changed!!!!");
-    return "";
-  }, []);
+
+  useEffect(() => {
+    onValue(dbRef, (snapshot) => {
+      
+    });
+  }, [dbRef]);
 
   useEffect(() => {
     get(dbRef)
@@ -57,12 +60,11 @@ const GameProvider = (props: React.PropsWithChildren) => {
         console.error(err);
       });
 
-    // get(dbRef)
-    //   .then((snapshot) => {
-    //     setTeamList(snapshot.val().teamList);
-    //     setPlayerList(snapshot.val().playerList);
-    //   });
-    
+    get(dbRef)
+      .then((snapshot) => {
+        setTeamList(snapshot.val().teamList);
+        setPlayerList(snapshot.val().playerList);
+      })
   }, [code]);
 
   const updateDB = () => {
@@ -83,11 +85,15 @@ const GameProvider = (props: React.PropsWithChildren) => {
   const onPlayerUpdate = (player) => {
     setPlayerList((prevState) => {
       const updatedList = {...prevState, [player.id]: player};
+      return updatedList;
     });
   };
   
   const onTeamUpdate = (team) => {
-    
+    setTeamList((prevState) => {
+      const updatedList = {...prevState, [team.id]: team};
+      return updatedList;
+    });
   };
   
   return (

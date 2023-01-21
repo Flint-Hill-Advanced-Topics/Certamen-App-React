@@ -4,6 +4,7 @@ import styles from "./PlayerEnter.module.css";
 import GameTitle from '../common/GameTitle';
 import Button from '../UI/Button'
 import Bubble from '../UI/Bubble';
+import BackArrow from '../UI/BackArrow';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -21,6 +22,7 @@ const PlayerEnter = () => {
   
   const onSubmitHandler = (event: any) => {
     event.preventDefault();
+    navigate("/Player/SelectTeam");
     /*
     if(someLogic) setIsVerified(true);
     else setIsVerified(false);
@@ -29,6 +31,7 @@ const PlayerEnter = () => {
   
   return (
     <>
+      <BackArrow className={styles.Arrow}> </BackArrow>
       <GameTitle />
       <Bubble>
         <div className={styles.Title}> Enter Your Game Code! </div>

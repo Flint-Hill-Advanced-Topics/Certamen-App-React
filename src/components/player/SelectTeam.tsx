@@ -4,6 +4,7 @@ import styles from "./SelectTeam.module.css";
 import GameTitle from '../common/GameTitle';
 import Bubble from '../UI/Bubble';
 import Button from '../UI/Button';
+import BackArrow from '../UI/BackArrow';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -30,6 +31,7 @@ const SelectTeam = () => {
   
   return (
       <>
+        <BackArrow className={styles.Arrow}> </BackArrow>
         <GameTitle />
         <Bubble>
           <h2 className={styles.Name}> Name:</h2>

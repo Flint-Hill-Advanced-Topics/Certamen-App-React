@@ -1,3 +1,5 @@
+import Player from "./Player";
+  
 class Team
 {
     name;//team name
@@ -9,7 +11,7 @@ class Team
         {player: null}
     ];
 
-    constructor(name, player1, player2, player3, player4) {
+    constructor(name: string, player1, player2, player3, player4) {
         this.name = name;
         this.memberList[0].player = player1
         this.memberList[1].player = player2

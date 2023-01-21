@@ -4,6 +4,7 @@ import styles from "./ModeratorEnter.module.css";
 import GameTitle from '../common/GameTitle';
 import Bubble from '../UI/Bubble';
 import Button from '../UI/Button';
+import BackArrow from '../UI/BackArrow';
 import Space from '../UI/Space';
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import GameManager from "../util/GameManager";
@@ -14,10 +15,10 @@ const ModeratorEnter = () => {
   const game = useContext(GameContext);
   
   const [code, setCode] = useState(game.manager.getCode());
-
   
   return (
     <>
+      <BackArrow className={styles.Arrow}> </BackArrow>
       <GameTitle />
       <Bubble>
         <h2 className={`${styles.Code}`}>Code</h2>
